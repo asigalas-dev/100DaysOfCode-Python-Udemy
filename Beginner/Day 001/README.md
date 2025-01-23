@@ -1,11 +1,11 @@
-##Day 1 of 100
+## Day 1 of 100
 
-###Project Name: Band Name Generator
+### Project Name: Band Name Generator
 
-####Project functionality:
+#### **Project functionality:**
 - This is a name generator that suggests a band name based on the city the user grew up in and their pet's name.
 
-####Concepts Learned:
+#### **Concepts Learned:**
 - Printing
 - String Manipulation
   - New line
