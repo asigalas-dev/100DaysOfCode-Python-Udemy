@@ -1,0 +1,59 @@
+Day 1 of 100: Notes
+
+------------
+
+Concepts learned:
+
+Printing
+String Manipulation
+	- New line
+	- String concatenation
+Inputs
+Variables
+	- Calculating length of string within variables or on their own
+	- Creating temporary variables
+	- Swapping two variable contents
+Variable Naming
+Debugging
+Commenting
+
+------------
+
+Terms learned:
+
+print ( ) - function
+
+"..." - string
+
+"...\n" - creating a new line within our string
+
+"Hello" + " Wolrd" - combing strings (The space in " World" is important for our output to have a space
+
+input ( ) - function
+	- input looks exactly like the print function but instead the string used acts as a prompt to the user as to what kind of data we want
+
+A way to use the input that was given by the user is to concatenate it within our string. An example would be the following:
+	print("Hello " + input("What is your name? ") + "!")
+	That starts by the input and then prints whatever we asked
+
+# - to add a comment you add the hashtag sign and then write your comment
+	- you can also make the whole line a comment by clicking anywhere on the line and pressing "CTRL+/"
+	- by pressing it again you can removed the comment
+
+variable - giving a label to a piece of data so that we refer or reference that data using the chosen variable name
+	name = input("What is your name?") - in this example we take the input and we assign it to the variable "name"
+	- as the name suggests, variables can vary and if we initiate a different input, they can change their value
+
+len( ) - that can calculate the length of the string by either including a string already or calculating it through a variable
+	- eg. 	len("hello")
+		len(variable)
+
+temp = - that is creating a temporary variable to store one of our variables and then recall it
+
+var1, var2 = var2, var1 - that is a way to swap variable contents
+
+variable naming - make sure you make your code readable with variables that make sense when you can back to them
+
+variable naming rules - can use multiple words but no spacing
+	- words can be separated with an underscore "_"
+	- can have numbers but not in the beginning of the name
