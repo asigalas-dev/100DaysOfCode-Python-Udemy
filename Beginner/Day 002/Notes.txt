@@ -17,6 +17,8 @@ Flooring a number
 Rounding a number
 Assignment Operators
 f-strings
+Forcing Decimal Points - Formatting
+
 ------------
 
 Terms learned:
