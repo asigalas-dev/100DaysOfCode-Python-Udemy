@@ -4,7 +4,7 @@ Day 4 of 100: Notes
 
 Concepts learned:
 
-Randomisation
+Randomisation 
 What is a Module
 Importing a Module
 Creating a Module
@@ -50,6 +50,6 @@ IndexError - when you try to access an item that is not in the range of the List
 nested lists - you can put Lists inside other Lists, this becomes something called a "Nested List" or a "2D List"
 	an example can be
 fruits = ["Cherry", "Apple", "Pear"]
-veg = ["Cucumber", "Kale", "Spinnach"]
+veg = ["Cucumber", "Kale", "Spinach"]
 fruits_and_veg = [fruits, veg]
 If we were to print fruits_and_veg[0] for example, it would give us all the fruits because this list is the item 0. Instead, if we just wanted the first item on the first list we could print fruits_and_veg[0][0]
