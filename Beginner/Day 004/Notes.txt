@@ -1,0 +1,55 @@
+Day 4 of 100: Notes
+
+------------
+
+Concepts learned:
+
+Randomisation
+What is a Module
+Importing a Module
+Creating a Module
+Random Integer
+Random Float
+Lists
+
+------------
+
+Terms learned:
+
+randomisation - a very important concept when we want our program or game to have a degree of unpredictability
+deterministic - a term used for computer systems, meaning that they will repeatable actions in a fully predictable way
+Mersenne Twister - a pseudorandom number generator that Python uses
+random - a module on python that helps us generate random numbers (check Python documentation for up to date usability)
+import module - where module is the name of the module we want to import on our Python
+module - each module is responsible for a different bit of functionality in our program. It also helps to keep our code tidy
+random.function - where function is the name of the function we want to call from the random module
+random.randint - a function that gives us a random integer between a and b
+	an example can be
+random.randint(1, 10)
+creating a module - we can create a module by just creating a new python file and then import it by using the name of the file on our main code. We can then call any function from that module by simply using my_module.my_function
+random.random() - you can generate a random number between 0.0 (inclusive) and 1.0 (not inclusive) using this code from the random module
+	we can also expand the range by multiplying it by a number
+	an example can be
+random.random() * 10 - that means that the range from 0.0<= random.random() <1.0, now became 0.0<= random.random() <10.0
+random.uniform(1, 10) - another way to generate random floating point numbers is to use the uniform() function. This will generate a random floating point number between 1 and 10. This method may or may not include the upper bound depending on the rounding of the floating point number. So it's best represented as:
+	a <= random.uniform(a,b) <= b
+So depending on if you want the upper bound included you will choose whether to use random.random() or random.uniform()
+list - a list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements. Each element or value that is inside of a list is called an item. Just as strings are defined as characters between quotes, lists are defined by having values between square brackets [ ]
+	an example can be
+list = [item1, item2]
+The items can be of any data type
+order - the order of the items included in a list is important and usable
+print(list[0]) = it look in the list for the first indexed item
+print(list[-1]) = will provide you with the last indexed item. Like looking at the list backwards
+list[0] = "new_item" - this is a way to modify an entry in the list
+list.append("new_item") - item will be added to the end of the list
+list.extend(["x1", "x2", "x3"]) - by doing that you are now extending the list by adding more than one items as a list
+random.choice(list_name) - that gives us a random option from our list
+len(list_name) - you can get the length of a list (number of items in the list) or the length of a string (number characters in the string) by using the len() functios
+IndexError - when you try to access an item that is not in the range of the List, you will get an IndexError
+nested lists - you can put Lists inside other Lists, this becomes something called a "Nested List" or a "2D List"
+	an example can be
+fruits = ["Cherry", "Apple", "Pear"]
+veg = ["Cucumber", "Kale", "Spinnach"]
+fruits_and_veg = [fruits, veg]
+If we were to print fruits_and_veg[0] for example, it would give us all the fruits because this list is the item 0. Instead, if we just wanted the first item on the first list we could print fruits_and_veg[0][0]
