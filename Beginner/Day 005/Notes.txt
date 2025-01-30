@@ -1,0 +1,72 @@
+Day 5 of 100: Notes
+
+------------
+
+Concepts learned:
+
+Loops
+	- For Loop
+	- For Loop with Range Function
+Sum
+Max / Min
+Shuffle list items
+Join list items
+
+------------
+
+Terms learned:
+
+loops - loops allow us to tell the computer to repeat actions without having to write repeated code. If we wanted the computer to print out 1 through to 100, it would very painful to type a print statement for every number, or even just typing out all the numbers 1 through to 100. Loops allow us to create a rule and the computer can follow it to do a repeated action
+for loop - one way to represent a loop is with a for loop. It would look something like this
+		for <variable name of each item> in <a List>:
+    		<do something>
+    		<do something else>
+
+		an example can be
+fruits = ["Apple", "Peach", "Pear"]
+for fruit in fruits:
+	print(fruit)
+This will go to each and every item on the list of fruits, assign it to the new variable fruit and print it. The outcome would look like this
+Apple
+Peach
+Pear
+sum - python has lots of built-in functions to help us work with numbers. One of them helps us calculate the sum (the total). e.g.
+student_scores = [180, 124, 165, 173, 189, 169, 146]
+total_score = sum(student_scores)
+But how does sum() work behind the scenes? The code is written by the people who developed Python and it might look something like this:
+student_scores = [180, 124, 165]
+sum = 0
+for score in student_scores:
+	sum += score
+print(sum)
+max / min - there are also a built-in Python methods called max() and min(), which allow you to pass in a List of numbers, and it will give you the highest number or the lowest number
+range() - the combination of the range() function with the Python For Loop allows us to run a loop for as many times as we wish. Instead of looping through each item in a List, we can loop through a range of numbers
+	an example can be
+for number in range (a, b):
+	print(number)
+this does not include b. For example range (1, 10) would print 1 to 9
+if I want all the number of the range, I have to set it to + 1
+	an example can be
+num1 = int(input("What is your first number?\n"))
+num2 = int(input("What is your second number?\n"))
+for number in range (num1, num2 + 1):
+	print(number)
+if I wanted to add a step between the number I have to add another comma with the number of the step
+	an example can be
+for number in range (1, 11, 3):
+	print(number)
+this would print
+1
+4
+7
+10
+random.shuffle() - it shuffles the contents of a list
+''.join(list_name) - it joins the contents of a list. Inside '' you can put anything you want. 
+	an example can be
+letters = ['a', 'b', 'c']
+print(''.join(letters))
+	would print abc
+if you were to type
+letters = ['a', 'b', 'c']
+print(', '.join(letters))
+	it would a, b, c
