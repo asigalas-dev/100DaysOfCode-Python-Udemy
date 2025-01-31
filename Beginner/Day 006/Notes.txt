@@ -1,0 +1,36 @@
+Day 6 of 100: Notes
+
+------------
+
+Concepts learned:
+
+Code Blocks
+Functions
+Loops
+	- While Loops
+Debugging
+
+------------
+
+Terms learned:
+
+function - a function in its simplest form is just a wrapper name for a block of code. You give it name and then when you call the function by that name, all the code within the function block will be executed. It can help us save time and reduce repeated code
+defining new functions - this is the way to define new functions
+	an example can be
+def my_function():
+	print("Hello")
+calling the function - just type the name of the function and in the parenthesis whatever you want it to do. In the example above we will just leave it blank if we wanted it to print hello
+code blocks - it is important to learn to write our code properly indented and in concise manner for it to be readable
+while loop - we are testing to see if a condition it's true and while it is true we execute the code; and it's only while something becomes false the loops stops
+	an example can be
+while this_is_true:
+	#Do something repeatedly
+while not condition_name: - this actually tests if the condition is met, so in other words if it's False it keep looping
+while loops vs for loops - for loops are great if you want to iterate over something and you need to do something with each thing you are iterating over
+	an example can be
+fruits = ["Apple", "Pear", "Orange"]
+for fruit in fruits:
+	print(fruit)
+this would require a for loop. You cannot do that easily using a while loop. Range is also better with a for loop
+you want to be using a while loop when you don't really care what number in a sequence you are in, what item you are iterating through in a list, and you just simply want to carry out some sort of functionality many times until some sort of condition that you set is True
+infinite loop - while loops are a little bit more "dangerous" than for loops because in for loops you are setting ahead of time how many times something is going to run, but for while loops, they will continue running until a condition is met. If it never meets this condition it because something that is called an infinite loop
