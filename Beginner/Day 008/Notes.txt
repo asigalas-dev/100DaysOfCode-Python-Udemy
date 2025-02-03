@@ -1,0 +1,64 @@
+Day 8 of 100: Notes
+
+------------
+
+Concepts learned:
+
+Functions with Inputs
+Arguments
+Parameters
+Multiple Inputs
+Positional Arguments
+Keyword Arguments
+List Index
+Using Modulo to Wrap Around a List When Out Of Range
+
+------------
+
+Terms learned:
+
+function inputs - by adding a variable name inside the parentheses when we create (define) a new function, it allows that function to take inputs when called. That means we can modify how the function behaves each time by passing in different inputs
+	an example can be
+# Creating the function
+def myFunction(input):
+	print(f"Hey! {input}")
+# Using the function
+myFunction("Tommy") 
+# Will output "Hey! Tommy"
+parameter - when you create a function with inputs, you are defining a variable name that will be given to the data that is passed in. The name of the input that has been passed in, e.g. name in this code here: def greet(name): is called the parameter
+argument - the value of the input variable, e.g. Angela when you call the previous greet function: greet("Angela") is called the argument
+multiple inputs - you can have multiple inputs in functions. All you need to do is separate them with a comma ,
+	an example can be
+def greet_with(name, location):
+	Hello name
+	What is it like in location
+positional arguments - by default, when you create a function in Python, it will keep the order of arguments in the function definition
+	an example can be
+def my_function(a, b)
+	print(a)
+	print(b)
+  
+my_function(2, 1)
+#It will print:
+# 2
+# 1
+keyword arguments - you can use keywords when you provide the arguments when you call a function so that there is less confusion which value is assigned to which input parameter
+	an example can be
+def my_function(a, b)
+	print(a)
+	print(b)
+  
+my_function(b=2, a=1)
+#It will print:
+# 1
+# 2
+using modulo to wrap around a list when out of range - modulo (%) ensures an index stays within a list's bounds by wrapping around when it exceeds the list length
+	an example can be
+alphabet = ['a', 'b', ..., 'z']
+index = alphabet.index('z')  # 25
+shift = 9
+index += shift
+index %= len(alphabet)  # Ensures it wraps around
+print(alphabet[index])  # 'i'
+the concept: using %= len(list) ensures values stay within the list range by wrapping around
+reverse sign of a number - when you multiply a number by -1 it will reverse its sign. e.g. 5 * -1 is the same as - 5
