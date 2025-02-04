@@ -1,0 +1,62 @@
+Day 9 of 100: Notes
+
+------------
+
+Concepts learned:
+
+Dictionaries
+Dictionary Nesting
+
+------------
+
+Terms learned:
+
+dictionary - a dictionary in Python functions similarly to a dictionary in real life. It's a data structure that allows us to associate a key to a value and pair the two pieces of data together. They are very helpful because they help us group together and tag relevant pieces of information
+One way to think of dictionaries is in form of a table. Every dictionary has two parts to it: On the left hand side is the "key" which is the equivalent of the word in the dictionary, and on the right side has the associated "value" which is the equivalent of the actual definition of the word - it would look like this {Key: Value}
+You can separate each key and value pair with a comma
+	an example can be
+colours = {
+	"apple": "red", 
+	"pear": "green", 
+	"banana": "yellow"
+}
+It's a good practice to have each dictionary entry on a different line indented one and the closing curly bracket on a new line as above. Also, it's a good practice to end each entry with a comma whether it's the last one or not, in case we want to add more value later
+This is how you retrieve items from a dictionary:
+print(colours["pear"])
+#Will print "green"
+This is how you can add new items to an existing dictionary:
+colours["peach"] = "pink"
+This is also how you can edit an existing value in a dictionary:
+colours["apple"] = "green"
+This is how to create an empty dictionary:
+my_empty_dictionary = {}
+you can also use that to wipe an already existing dictionary
+This is how to loop through a dictionary and print all the keys:
+for key in colours:
+    print(key)
+This is how to loop through a dictionary and print all the values:
+for key in colours:
+    print(colours[key])
+To print on the same line you can use:
+for key in programming_dictionary:
+    print(f"{key}: {colours[key]}")
+nesting (in dictionaries) - works as having a folder inside another folder. You can mix and match various data types to achieve your desired structure
+Instead of a String value assigned to a key, we can replace it with a List. You can nest a List in a Dictionary like this:
+my_dictionary = {
+    key1: [List],
+    key2: {Value},
+}
+In this example there is both a list and a dictionary nested inside a dictionary
+To print a specific value within a nested list you can use the following as an example:
+travel_log = {
+    "France" : ["Paris", "Lille", "Dijon"],
+    "Germany" : ["Stuttgart", "Berlin"],
+    "Greece": ["Athens", "Santorini", "Syros"]
+}
+
+print(travel_log["France"][1])
+# Will print Lille
+This is an example of a 2D list:
+nested_list = ["A", "B", ["C", "D"]]
+print(nested_list[2][1])
+# it would print D
