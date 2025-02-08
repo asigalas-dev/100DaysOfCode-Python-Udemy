@@ -1,59 +1,143 @@
 Day 1 of 100: Notes
+----------------------
 
-------------
+Concepts Learned:
+----------------------
+- Printing
+- String Manipulation:
+  - New line
+  - String concatenation
+- Inputs
+- Variables:
+  - Calculating string length within variables or on their own
+  - Creating temporary variables
+  - Swapping two variable contents
+- Variable Naming
+- Debugging
+- Commenting
 
-Concepts learned:
+----------------------
 
-Printing
-String Manipulation
-	- New line
-	- String concatenation
-Inputs
-Variables
-	- Calculating length of string within variables or on their own
-	- Creating temporary variables
-	- Swapping two variable contents
-Variable Naming
-Debugging
-Commenting
+Key Terms & Explanations:
+----------------------
 
-------------
+Printing:
+----------------------
+- **`print()`** → A function used to display output.
 
-Terms learned:
+- Example:
 
-print ( ) - function
+    print("Hello, World!")
 
-"..." - string
+  Output:
 
-"...\n" - creating a new line within our string
+    Hello, World!
 
-"Hello" + " Wolrd" - combing strings (The space in " World" is important for our output to have a space
+Strings:
+----------------------
+- **A string** is any sequence of characters enclosed in quotes.
+- Example:
 
-input ( ) - function
-	- input looks exactly like the print function but instead the string used acts as a prompt to the user as to what kind of data we want
+    "This is a string"
 
-A way to use the input that was given by the user is to concatenate it within our string. An example would be the following:
-	print("Hello " + input("What is your name? ") + "!")
-	That starts by the input and then prints whatever we asked
+New Line in a String:
+----------------------
+- **`\n`** → Creates a new line within a string.
+- Example:
 
-# - to add a comment you add the hashtag sign and then write your comment
-	- you can also make the whole line a comment by clicking anywhere on the line and pressing "CTRL+/"
-	- by pressing it again you can removed the comment
+    print("Hello\nWorld!")
 
-variable - giving a label to a piece of data so that we refer or reference that data using the chosen variable name
-	name = input("What is your name?") - in this example we take the input and we assign it to the variable "name"
-	- as the name suggests, variables can vary and if we initiate a different input, they can change their value
+  Output:
 
-len( ) - that can calculate the length of the string by either including a string already or calculating it through a variable
-	- eg. 	len("hello")
-		len(variable)
+    Hello
+    World!
 
-temp = - that is creating a temporary variable to store one of our variables and then recall it
+String Concatenation:
+----------------------
+- Strings can be **combined (concatenated)** using `+`.
 
-var1, var2 = var2, var1 - that is a way to swap variable contents
+- Example:
 
-variable naming - make sure you make your code readable with variables that make sense when you can back to them
+    print("Hello" + " World")
 
-variable naming rules - can use multiple words but no spacing
-	- words can be separated with an underscore "_"
-	- can have numbers but not in the beginning of the name
+  Output:
+
+    Hello World
+
+- **Note:** The space before `"World"` in `" World"` is important to ensure proper formatting.
+
+Inputs:
+----------------------
+- **`input()`** → A function that prompts the user for input.
+
+- Example:
+
+    input("What is your name? ")
+
+- **Using user input within a string:**
+
+    print("Hello " + input("What is your name? ") + "!")
+
+  - The program first takes the user’s name.
+  - It then prints: `"Hello [user’s input]!"`
+
+Comments:
+----------------------
+- **`#`** → Used to add comments for better code readability.
+
+- Example:
+
+    # This prints a greeting
+    print("Hello, World!")
+
+- **Shortcut to toggle comments:**  
+  - **CTRL + /** → Quickly adds or removes comments for selected lines.
+
+Variables:
+----------------------
+- **Definition:** A variable is a **label for storing data**.
+
+- Example:
+
+    name = input("What is your name?")
+
+  - The user's input is stored in the variable `name` for later use.
+
+Calculating String Length:
+----------------------
+- **`len()`** → Counts the number of characters in a string.
+
+- Examples:
+
+    print(len("hello"))   # Directly using a string
+    print(len(name))      # Using a variable
+
+Temporary Variables:
+----------------------
+- You can create a **temporary variable** to store values for later use.
+
+- Example:
+
+    temp = value
+
+Swapping Variable Contents:
+----------------------
+- Variables can be **swapped** easily.
+
+- Example:
+
+    var1, var2 = var2, var1
+
+  - This swaps the values of `var1` and `var2`.
+
+Variable Naming Best Practices:
+----------------------
+- Use **meaningful names** for better readability.
+- Variable names:
+  - **Cannot contain spaces** → Use underscores (`_`) instead.
+  - **Can contain numbers**, but **not at the beginning**.
+
+  - Example:
+
+      full_name = "John Doe"   # ✅ Correct
+      1name = "Alice"          # ❌ Incorrect

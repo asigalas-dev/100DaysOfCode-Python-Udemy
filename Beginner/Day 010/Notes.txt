@@ -1,67 +1,137 @@
 Day 10 of 100: Notes
+----------------------
 
-------------
+Concepts Learned:
+----------------------
+- Functions with Outputs
+- Docstrings
 
-Concepts learned:
+----------------------
 
-Functions with Outputs
-Docstrings
+Key Terms & Explanations:
+----------------------
 
-------------
+Functions with Outputs:
+----------------------
+- We have already seen functions that **execute code** and functions with **inputs** that allow variation.
+- Now, we explore **functions that return outputs**, which can be stored and reused.
 
-Terms learned:
+- **Example: Function with an Output**
 
-functions with output - We've seen functions with only an execution body, functions with inputs that allow for variation in execution of the function body and now we'll see the final form of functions. Functions that can have outputs
-	an example can be:
-def format_name(f_name, l_name):
-    return f"{f_name.title()} {l_name.title()}"
+    def format_name(f_name, l_name):
+        return f"{f_name.title()} {l_name.title()}"
 
-print(format_name("aNArgyRoS","sIGALAS"))
-# Would print Anargyros Sigalas
-this function takes two inputs (f_name and l_name) and returns an f string. Then the returned sting is passed inside the print function and it prints the outcome
-return - this keyword can be used to exit a function and return a value. The return keyword also tells the computer that this is the end of the function
-a way to ask for an input that will be pasted in the function can be (as per the example above):
-print(format_name(input("What is your first name? "),input("What is your last name? ")))
-.title() - a way to format a string to title case (only first letter capital)
-.strip() - a way to removes spaces at the beginning and end of a string
-	an example can be:
-def format_name(f_name, l_name):
-    return f"{f_name.strip().title()} {l_name.strip().title()}"
+    print(format_name("aNArgyRoS","sIGALAS"))
 
-print(format_name("      aNArgyRoS    ","   sIGALAS   "))
-# Would print Anargyros Sigalas
-print vs output -the return statement is used to give back a value from a function, which can be used later, while print is used to display a value to the console only for the programmer to see
-terminating with return - functions terminate at the return keyword. If you write code below the return statement that code will not be executed
-we can also terminate a function early by giving it an empty return
-	an example can be:
-def format_name(f_name, l_name):
-    if f_name == "" or l_name == "":
-        return
-    return f"{f_name.title()} {l_name.title()}"
+  Output:
 
-print(format_name(input("What is your first name? "),input("What is your last name? ")))
-#this will terminate the function early if it receives and empty string
-#though it's better to return something so that the user (or developer) knows what happened. On this example it would have been
-return "You did not provide valid inputs"
-conditional returns - when we have control flow, as in the code, will behave differently (go down different execution paths) depending on certain conditional checks, we can end up with multiple endings (returns)
-	an example can be:
-def canBuyAlcohol(age):
-    if age >= 18:
-        return True
-    else:
+    Anargyros Sigalas
+
+- This function takes two inputs (`f_name`, `l_name`) and **returns** a formatted string.
+- The `return` value is then passed to `print()` to display the output.
+
+Return Keyword:
+----------------------
+- **`return`** is used to **exit a function** and send a **value** back.
+- Any code **after `return` inside the function will not run**.
+
+- **Example: Function using input**
+
+    print(format_name(input("What is your first name? "), input("What is your last name? ")))
+
+Title Case Formatting:
+----------------------
+- **`.title()`** → Formats a string to **title case** (capitalizing only the first letter of each word).
+
+Stripping Extra Spaces:
+----------------------
+- **`.strip()`** → Removes spaces at the **beginning and end** of a string.
+
+- **Example: Using `.strip()` with `.title()`**
+
+    def format_name(f_name, l_name):
+        return f"{f_name.strip().title()} {l_name.strip().title()}"
+
+    print(format_name("      aNArgyRoS    ", "   sIGALAS   "))
+
+  Output:
+
+    Anargyros Sigalas
+
+Print vs Return:
+----------------------
+- **`return`** → **Gives back a value** from a function that can be used elsewhere in the program.
+- **`print()`** → **Only displays** the value in the console (useful for debugging).
+
+Terminating with Return:
+----------------------
+- Functions **terminate** at the `return` keyword.
+- Any **code after `return` will not be executed**.
+
+- **Example: Exiting the function early**
+
+    def format_name(f_name, l_name):
+        if f_name == "" or l_name == "":
+            return
+        return f"{f_name.title()} {l_name.title()}"
+
+    print(format_name(input("What is your first name? "), input("What is your last name? ")))
+
+- If an **empty string** is provided, the function **exits early**.
+
+Returning a Message Instead of an Empty Return:
+----------------------
+- Instead of returning **nothing**, return a **message** so the user knows what happened.
+
+- **Example: Returning an error message**
+
+    def format_name(f_name, l_name):
+        if f_name == "" or l_name == "":
+            return "You did not provide valid inputs"
+        return f"{f_name.title()} {l_name.title()}"
+
+Conditional Returns:
+----------------------
+- **Control flow inside functions** determines different execution paths, leading to multiple possible `return` values.
+
+- **Example: Function with multiple return paths**
+
+    def canBuyAlcohol(age):
+        if age >= 18:
+            return True
+        else:
+            return False
+
+Removing Unnecessary Else:
+----------------------
+- Since `return` **exits the function**, an `else` is **not required**.
+
+- **Example: Simplified function**
+
+    def canBuyAlcohol(age):
+        if age >= 18:
+            return True
         return False
-else (not always necessary) - return exits the function immediately, so an else after if is unnecessary if the next statement would run anyway
-	as per the example above:
-def canBuyAlcohol(age):
-    if age >= 18:
-        return True
-    return False
-docstrings - you can use docstrings to write multiline comments that document your code. The docstring has to go on the first line after the declaration. You have to use 3 double quotation marks and within these you should write your documentation like so:
-def function_name():
-    """This is a note of documentation."""
-function as a value - we can store a function as a value but if we do so, we cannot put the parenthesis
-	an example can be:
-def add(n1, n2):
-    return n1 + n2
 
-my_favourite_operation = add
+Docstrings:
+----------------------
+- **Docstrings** are used to write **multiline comments** that document a function.
+- The docstring must be the **first line inside the function**.
+- Use **three double quotes (`"""`)** for docstrings.
+
+- **Example: Using a docstring**
+
+    def function_name():
+        """This is a note of documentation."""
+
+Function as a Value:
+----------------------
+- A **function can be stored as a variable**.
+- **Do not include parentheses (`()`)** when assigning it, or it will execute immediately.
+
+- **Example: Storing a function in a variable**
+
+    def add(n1, n2):
+        return n1 + n2
+
+    my_favourite_operation = add

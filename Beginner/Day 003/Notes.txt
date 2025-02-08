@@ -1,121 +1,191 @@
 Day 3 of 100: Notes
+----------------------
 
-------------
+Concepts Learned:
+----------------------
+- Conditionals:
+  - If / Else
+  - Elif
+- Comparator Operators
+- Modulo Operator
+- Nesting
+- Logical Operators:
+  - and
+  - or
+  - not
+- Multiple String Lines (''' ''')
 
-Concepts learned:
+----------------------
 
-Conditionals
-	- If / Else
-	- Elif
-Comparator Operators
-Modulo Operator
-Nesting
-Logical Operators
-	- and
-	- or
-	- not
-Multiple String Lines (''' ''')
+Key Terms & Explanations:
+----------------------
 
-------------
+if/else (Conditional Statements):
+----------------------
+- A conditional statement determines **what should happen based on a condition**.
+- Syntax in Python:
 
-Terms learned:
+    if condition:
+        do this
+    else:
+        do this
 
-if/else - is a type of conditional statement. Depending on a particular condition we will do either A or B
-	On Python it would look like this
-if condition:
-	do this
-else:
-	do this
-indentation - it is very important for Python to indent lines of code properly
-	for example
-if 5 > 2: #This is a parent line of code
-	print("yes") #this is a child line of code
-comparator operators - 
-	> Greater than
-	< Less than
-	>= Greater than or equal to
-	<= Less than or equal to
-	== Equal to
-	!= Not equal to
-modulo operator - the modulo operator gives you the remainder of a division
-	an example can be
-	6 % 2 #will be 0
-	6 % 5 #will be 1
-	6 % 4 #will be 2
-nesting - you can put if/else statements inside other if/else statements, which is known as nesting
-	an example can be
-if maths_score >= 90:
-	if english_score >= 90:
-		print("You're good at everything")
-	else:
-		print("You're good at maths")
-if english_score >= 90:
-	print("You're good at english)
-	In this case only when a student has over 90 on maths and english, do they get "You are good at everything"
-	Note: You can also have if statements that don't have a paired else statement
-elif - checks for extra conditions. you can add as many elif conditions as you want
-	an example can be
-if condition1:
-	do A
-elif condition2:
-	do B
-else:
-	do this
-multiple ifs - you can write as many if statements as you need to check for different conditions that are unrelated to each other. 	some examples can be
-# If/elif/else - in the if/elif/else block, only one of A, B, or C can happen, because if/elif/else are mutually exclusive. The first condition has to fail to go into the elif and the elif (or multiple elif) have to fail to go into the else. Condition 2 is only checked if condition 1 is false
+- Example:
 
-if <condition 1 is true>
-	<do A>
-elif <condition 2 is true>
-	<do B>
-else
-	<do C>
+    if 5 > 2:
+        print("Yes")
+    else:
+        print("No")
 
-# Nested if statements - in the nested if statements, A, B and C can all happen, but conditions 1, 2 and 3 must all be true. The computer will only check condition 2 if condition 1 is true
+Indentation:
+----------------------
+- **Indentation is crucial in Python.**  
+- Code inside an `if` statement **must** be indented.
+- Example:
 
-if <condition 1 is true>
-	<do A>
-		if <condition 2 is true>
-			<do B>
-			if <condition 3 is true>
-				<do C>
+    if 5 > 2:  # This is a parent line of code
+        print("Yes")  # This is a child line of code
 
-# Multiple if statements - in the multiple if statements, A, B, and C can all happen. But they are completely independent of each other. C can happen even if A and B don't. Every condition is checked, no matter the result of the others
+Comparator Operators:
+----------------------
+- Used to **compare values**.
+- List of comparison operators:
+  - `>`  Greater than
+  - `<`  Less than
+  - `>=` Greater than or equal to
+  - `<=` Less than or equal to
+  - `==` Equal to
+  - `!=` Not equal to
 
-if <condition 1 is true>
-    <do A>
-if <condition 2 is true>
-    <do B>
-if <condition 3 is true>
-    <do C>
-+= - when you want to increase the value that is held in a variable and you want to save it back into the variable you can use +=
-	an example can be
-bill += 3 which is the same as bill = bill + 3
-.lower() = returns a string where all characters are lowercase
-	an example can be
-txt = "HELLO"
-x = txt.lower()
-print(x)
-	which will print "hello"
-	-
-	another example can be accounting for any input whether capital or lower case
-	if add_extra_cheese.lower() == "y":
-		bill = 10
-	elif add_extra_cheese.lower() != "n":
-		print("You typed the wrong input.")
-logical operators - you can combine different conditions using logical operators
-	A and B #Both conditions need to be true
-	C or D #Only one condition needs to be true
-	not E #The condition must be false#
-''' - by using three single quotes at the beginning and the end, I can tell the system that my string is spread into multiple lines
-	an example can be
-print('''
-this
-is
-a
-string
-''')
-\ - code interprets the backslash as an escape symbol. We can use it in front of any symbol (i.e. ') to show the code that this is not to be interpreted as code
-\' - you have to use this in order to write something that has an apostrophe
-	an example can be
-print("You\'re")
+Modulo Operator:
+----------------------
+- The **modulo operator (%)** gives the remainder of a division.
+- Examples:
+
+    6 % 2  → 0  (6 is perfectly divisible by 2)
+    6 % 5  → 1  (6 divided by 5 leaves remainder 1)
+    6 % 4  → 2  (6 divided by 4 leaves remainder 2)
+
+Nesting:
+----------------------
+- You can place **if/else** statements **inside other if/else** statements (this is called **nesting**).
+- Example:
+
+    if maths_score >= 90:
+        if english_score >= 90:
+            print("You're good at everything")
+        else:
+            print("You're good at maths")
+
+    if english_score >= 90:
+        print("You're good at English")
+
+- In this case, **only** if both scores are above 90, the student gets **"You're good at everything"**.
+
+elif (Extra Conditions):
+----------------------
+- `elif` allows for **multiple conditions**.
+- Syntax:
+
+    if condition1:
+        do A
+    elif condition2:
+        do B
+    else:
+        do C
+
+Multiple `if` Statements:
+----------------------
+- You can have multiple independent `if` statements checking different conditions.
+- **Difference between if/elif/else, nested if, and multiple if statements:**
+
+  1. **If/Elif/Else** → Only **one** condition runs.  
+     Example:
+
+        if condition1:
+            do A
+        elif condition2:
+            do B
+        else:
+            do C
+
+  2. **Nested If** → All conditions **must be true** for inner statements to execute.  
+     Example:
+
+        if condition1:
+            do A
+            if condition2:
+                do B
+                if condition3:
+                    do C
+
+  3. **Multiple Ifs** → Every condition is checked independently.  
+     Example:
+
+        if condition1:
+            do A
+        if condition2:
+            do B
+        if condition3:
+            do C
+
+    - In this case, **A, B, and C can all execute** regardless of each other.
+
+Assignment Operator (`+=`):
+----------------------
+- **Used to increase a variable’s value and store the new value back**.
+- Example:
+
+    bill += 3  # Equivalent to bill = bill + 3
+
+.lower() (String Method):
+----------------------
+- Converts all characters in a string to **lowercase**.
+- Example:
+
+    txt = "HELLO"
+    x = txt.lower()
+    print(x)  
+
+  Output:
+
+    hello
+
+- Useful for **case-insensitive input checking**.
+  Example:
+
+    if add_extra_cheese.lower() == "y":
+        bill = 10
+    elif add_extra_cheese.lower() != "n":
+        print("You typed the wrong input.")
+
+Logical Operators:
+----------------------
+- **Used to combine conditions.**
+- List of logical operators:
+  - `A and B`  → Both conditions must be **True**.
+  - `C or D`   → **At least one** condition must be **True**.
+  - `not E`    → **The condition must be False**.
+
+Multiple String Lines (`''' '''`):
+----------------------
+- **Using three single quotes (`'''`)** allows text to span **multiple lines**.
+- Example:
+
+    print('''
+    This
+    is
+    a
+    string
+    ''')
+
+Escape Character (`\`):
+----------------------
+- The **backslash (`\`)** is an escape character used to **prevent special characters from breaking the code**.
+- Example:
+
+    print("You\'re")
+
+  Output:
+
+    You're

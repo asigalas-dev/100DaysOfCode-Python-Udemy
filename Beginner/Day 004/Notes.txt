@@ -1,55 +1,168 @@
 Day 4 of 100: Notes
+----------------------
 
-------------
+Concepts Learned:
+----------------------
+- Randomisation
+- What is a Module
+- Importing a Module
+- Creating a Module
+- Random Integer
+- Random Float
+- Lists
 
-Concepts learned:
+----------------------
 
-Randomisation 
-What is a Module
-Importing a Module
-Creating a Module
-Random Integer
-Random Float
-Lists
+Key Terms & Explanations:
+----------------------
 
-------------
+Randomisation:
+----------------------
+- A fundamental concept used when we want **unpredictability** in our programs or games.
 
-Terms learned:
+Deterministic:
+----------------------
+- A term used for computer systems, meaning they **always produce predictable results** when given the same input.
 
-randomisation - a very important concept when we want our program or game to have a degree of unpredictability
-deterministic - a term used for computer systems, meaning that they will repeatable actions in a fully predictable way
-Mersenne Twister - a pseudorandom number generator that Python uses
-random - a module on python that helps us generate random numbers (check Python documentation for up to date usability)
-import module - where module is the name of the module we want to import on our Python
-module - each module is responsible for a different bit of functionality in our program. It also helps to keep our code tidy
-random.function - where function is the name of the function we want to call from the random module
-random.randint - a function that gives us a random integer between a and b
-	an example can be
-random.randint(1, 10)
-creating a module - we can create a module by just creating a new python file and then import it by using the name of the file on our main code. We can then call any function from that module by simply using my_module.my_function
-random.random() - you can generate a random number between 0.0 (inclusive) and 1.0 (not inclusive) using this code from the random module
-	we can also expand the range by multiplying it by a number
-	an example can be
-random.random() * 10 - that means that the range from 0.0<= random.random() <1.0, now became 0.0<= random.random() <10.0
-random.uniform(1, 10) - another way to generate random floating point numbers is to use the uniform() function. This will generate a random floating point number between 1 and 10. This method may or may not include the upper bound depending on the rounding of the floating point number. So it's best represented as:
-	a <= random.uniform(a,b) <= b
-So depending on if you want the upper bound included you will choose whether to use random.random() or random.uniform()
-list - a list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements. Each element or value that is inside of a list is called an item. Just as strings are defined as characters between quotes, lists are defined by having values between square brackets [ ]
-	an example can be
-list = [item1, item2]
-The items can be of any data type
-order - the order of the items included in a list is important and usable
-print(list[0]) = it look in the list for the first indexed item
-print(list[-1]) = will provide you with the last indexed item. Like looking at the list backwards
-list[0] = "new_item" - this is a way to modify an entry in the list
-list.append("new_item") - item will be added to the end of the list
-list.extend(["x1", "x2", "x3"]) - by doing that you are now extending the list by adding more than one items as a list
-random.choice(list_name) - that gives us a random option from our list
-len(list_name) - you can get the length of a list (number of items in the list) or the length of a string (number characters in the string) by using the len() functios
-IndexError - when you try to access an item that is not in the range of the List, you will get an IndexError
-nested lists - you can put Lists inside other Lists, this becomes something called a "Nested List" or a "2D List"
-	an example can be
-fruits = ["Cherry", "Apple", "Pear"]
-veg = ["Cucumber", "Kale", "Spinach"]
-fruits_and_veg = [fruits, veg]
-If we were to print fruits_and_veg[0] for example, it would give us all the fruits because this list is the item 0. Instead, if we just wanted the first item on the first list we could print fruits_and_veg[0][0]
+Mersenne Twister:
+----------------------
+- The **pseudorandom number generator** that Python uses to generate random numbers.
+
+Random Module:
+----------------------
+- **`random`** is a module in Python that helps us generate random numbers.
+- Always check **Python documentation** for the latest features and usability.
+
+Importing a Module:
+----------------------
+- Modules allow us to **organize code into separate files**.
+- To import a module:
+
+    import module_name
+
+- Example:
+
+    import random  # Imports the random module
+
+What is a Module?
+----------------------
+- A **module** is a collection of Python functions that serve a specific purpose.
+- Modules help keep **code organized and reusable**.
+
+Using Functions from a Module:
+----------------------
+- To use a function from the `random` module:
+
+    random.function_name()
+
+- Example:
+
+    random.randint(1, 10)  # Generates a random integer between 1 and 10.
+
+Creating a Module:
+----------------------
+- You can create a custom module by:
+  1. **Creating a new Python file**.
+  2. **Importing it** in your main script.
+  3. **Calling functions from it**.
+
+- Example:
+
+    import my_module
+    my_module.my_function()
+
+Random Integer:
+----------------------
+- `random.randint(a, b)` → Generates a **random integer** between `a` and `b` (inclusive).
+- Example:
+
+    print(random.randint(1, 10))  # Random integer between 1 and 10
+
+Random Float:
+----------------------
+- `random.random()` → Generates a **random float** between **0.0 (inclusive)** and **1.0 (not inclusive)**.
+- Example:
+
+    print(random.random())  # Outputs a float between 0.0 and 1.0
+
+- **Expanding the range**:
+  - You can multiply `random.random()` by a number to scale the range.
+  - Example:
+
+      print(random.random() * 10)  # Outputs a float between 0.0 and 10.0
+
+Random Float with Upper Bound:
+----------------------
+- `random.uniform(a, b)` → Generates a **random floating point number** between `a` and `b`.
+- Example:
+
+    print(random.uniform(1, 10))  # Random float between 1 and 10
+
+- This function **may or may not include the upper bound** due to floating point rounding.
+
+Lists:
+----------------------
+- A **list** is a **mutable (changeable), ordered sequence of elements** in Python.
+- Lists are **defined using square brackets** `[ ]`.
+
+- Example:
+
+    my_list = [item1, item2]
+
+- Items in a list **can be of any data type**.
+
+List Order:
+----------------------
+- The **order of elements in a list matters**.
+- Accessing list elements:
+  - `list[0]` → Gets the **first item**.
+  - `list[-1]` → Gets the **last item**.
+
+Modifying a List:
+----------------------
+- Changing an item in a list:
+
+    list[0] = "new_item"  # Replaces the first item
+
+- **Appending** an item:
+
+    list.append("new_item")  # Adds a new item to the end of the list
+
+- **Extending** a list (adding multiple items):
+
+    list.extend(["x1", "x2", "x3"])  # Adds multiple items at once
+
+Selecting a Random Item from a List:
+----------------------
+- `random.choice(list_name)` → Selects a **random element from a list**.
+- Example:
+
+    items = ["apple", "banana", "cherry"]
+    print(random.choice(items))  # Randomly picks one
+
+Getting the Length of a List:
+----------------------
+- `len(list_name)` → Returns the **number of items in a list**.
+- Can also be used for **counting characters in a string**.
+
+Handling List Errors:
+----------------------
+- **IndexError** → Occurs when trying to access an item that **does not exist**.
+- Example:
+
+    my_list = ["apple", "banana"]
+    print(my_list[3])  # ❌ IndexError because index 3 does not exist
+
+Nested Lists (2D Lists):
+----------------------
+- A list **inside another list** is called a **nested list** or **2D list**.
+- Example:
+
+    fruits = ["Cherry", "Apple", "Pear"]
+    veg = ["Cucumber", "Kale", "Spinach"]
+    fruits_and_veg = [fruits, veg]
+
+- Accessing elements in a **nested list**:
+  - `fruits_and_veg[0]` → Returns the **first list** (`["Cherry", "Apple", "Pear"]`).
+  - `fruits_and_veg[0][0]` → Returns **"Cherry"** (first item in the first list).
+

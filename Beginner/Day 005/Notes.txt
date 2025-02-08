@@ -1,72 +1,152 @@
 Day 5 of 100: Notes
+----------------------
 
-------------
+Concepts Learned:
+----------------------
+- Loops:
+  - For Loop
+  - For Loop with Range Function
+- Sum
+- Max / Min
+- Shuffle List Items
+- Join List Items
 
-Concepts learned:
+----------------------
 
-Loops
-	- For Loop
-	- For Loop with Range Function
-Sum
-Max / Min
-Shuffle list items
-Join list items
+Key Terms & Explanations:
+----------------------
 
-------------
+Loops:
+----------------------
+- Loops allow us to **repeat actions** without writing redundant code.
+- Example: Printing numbers **1 to 100** manually would be tedious, but loops let us automate it.
 
-Terms learned:
+For Loop:
+----------------------
+- A **for loop** iterates over each item in a list or range.
+- Syntax:
 
-loops - loops allow us to tell the computer to repeat actions without having to write repeated code. If we wanted the computer to print out 1 through to 100, it would very painful to type a print statement for every number, or even just typing out all the numbers 1 through to 100. Loops allow us to create a rule and the computer can follow it to do a repeated action
-for loop - one way to represent a loop is with a for loop. It would look something like this
-		for <variable name of each item> in <a List>:
-    		<do something>
-    		<do something else>
+    for <variable_name> in <list>:
+        <do something>
 
-		an example can be
-fruits = ["Apple", "Peach", "Pear"]
-for fruit in fruits:
-	print(fruit)
-This will go to each and every item on the list of fruits, assign it to the new variable fruit and print it. The outcome would look like this
-Apple
-Peach
-Pear
-sum - python has lots of built-in functions to help us work with numbers. One of them helps us calculate the sum (the total). e.g.
-student_scores = [180, 124, 165, 173, 189, 169, 146]
-total_score = sum(student_scores)
-But how does sum() work behind the scenes? The code is written by the people who developed Python and it might look something like this:
-student_scores = [180, 124, 165]
-sum = 0
-for score in student_scores:
-	sum += score
-print(sum)
-max / min - there are also a built-in Python methods called max() and min(), which allow you to pass in a List of numbers, and it will give you the highest number or the lowest number
-range() - the combination of the range() function with the Python For Loop allows us to run a loop for as many times as we wish. Instead of looping through each item in a List, we can loop through a range of numbers
-	an example can be
-for number in range (a, b):
-	print(number)
-this does not include b. For example range (1, 10) would print 1 to 9
-if I want all the number of the range, I have to set it to + 1
-	an example can be
-num1 = int(input("What is your first number?\n"))
-num2 = int(input("What is your second number?\n"))
-for number in range (num1, num2 + 1):
-	print(number)
-if I wanted to add a step between the number I have to add another comma with the number of the step
-	an example can be
-for number in range (1, 11, 3):
-	print(number)
-this would print
-1
-4
-7
-10
-random.shuffle() - it shuffles the contents of a list
-''.join(list_name) - it joins the contents of a list. Inside '' you can put anything you want. 
-	an example can be
-letters = ['a', 'b', 'c']
-print(''.join(letters))
-	would print abc
-if you were to type
-letters = ['a', 'b', 'c']
-print(', '.join(letters))
-	it would a, b, c
+- Example:
+
+    fruits = ["Apple", "Peach", "Pear"]
+    for fruit in fruits:
+        print(fruit)
+
+- Output:
+
+    Apple
+    Peach
+    Pear
+
+Sum:
+----------------------
+- Python provides built-in functions to work with numbers, such as `sum()`.
+- Example:
+
+    student_scores = [180, 124, 165, 173, 189, 169, 146]
+    total_score = sum(student_scores)
+
+- **How `sum()` works behind the scenes** (simplified version):
+
+    student_scores = [180, 124, 165]
+    total = 0
+    for score in student_scores:
+        total += score
+    print(total)
+
+Max / Min:
+----------------------
+- `max()` → Finds the **largest number** in a list.
+- `min()` → Finds the **smallest number** in a list.
+
+- Example:
+
+    numbers = [10, 25, 3, 89, 45]
+    highest = max(numbers)  # 89
+    lowest = min(numbers)   # 3
+
+Range() Function:
+----------------------
+- `range()` allows looping through a sequence of numbers.
+- Example:
+
+    for number in range(a, b):
+        print(number)
+
+- This prints numbers from `a` to `b-1` (does **not include `b`**).
+- Example:
+
+    for number in range(1, 10):
+        print(number)
+
+  Output:
+
+    1
+    2
+    3
+    ...
+    9  # (10 is not included)
+
+Including the Upper Bound:
+----------------------
+- To include the last number, add `+1`.
+
+- Example:
+
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    for number in range(num1, num2 + 1):
+        print(number)
+
+Step Value in Range:
+----------------------
+- A **step value** can be added to skip numbers.
+
+- Example:
+
+    for number in range(1, 11, 3):
+        print(number)
+
+- Output:
+
+    1
+    4
+    7
+    10
+
+Shuffling a List:
+----------------------
+- `random.shuffle(list_name)` → **Randomly rearranges** the items in a list.
+
+- Example:
+
+    import random
+    numbers = [1, 2, 3, 4, 5]
+    random.shuffle(numbers)
+    print(numbers)  # Output will be randomized each time
+
+Joining List Items:
+----------------------
+- `''.join(list_name)` → Joins items in a list **into a string**.
+- Inside the quotes (`''`), you can specify a **separator**.
+
+- Example **without separator**:
+
+    letters = ['a', 'b', 'c']
+    print(''.join(letters))
+
+  Output:
+
+    abc
+
+- Example **with a separator**:
+
+    letters = ['a', 'b', 'c']
+    print(', '.join(letters))
+
+  Output:
+
+    a, b, c

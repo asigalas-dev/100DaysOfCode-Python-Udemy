@@ -1,98 +1,214 @@
 Day 2 of 100: Notes
+----------------------
 
-------------
+Concepts Learned:
+----------------------
+- Data Types:
+  - Strings
+  - Integers
+  - Floats
+  - Booleans
+- Subscripting
+- Type Checking
+- Type Conversion (Type Casting in Python)
+- Mathematical Operations
+- Flooring a Number
+- Rounding a Number
+- Assignment Operators
+- f-strings
+- Forcing Decimal Points - Formatting
 
-Concepts learned:
+----------------------
 
-Data Types
-	- Strings
-	- Integers
-	- Floats
-	- Booleans
-Subscripting
-Type Checking
-Type Conversion (Type Casting in Python)
-Mathematical Operations
-Flooring a number
-Rounding a number
-Assignment Operators
-f-strings
-Forcing Decimal Points - Formatting
+Key Terms & Explanations:
+----------------------
 
-------------
+Counting in Programming:
+----------------------
+- In programming, counting **always starts from 0**.
 
-Terms learned:
+Subscripting:
+----------------------
+- **[ ] (Square Brackets)** → Used to extract a specific character from a string.
+- Example:
 
-counting - in programming you always start counting from 0
-[ ] - inside the square brackets we can put the index or position of a character that we want to pull
-	an example can be 
-print("hello"[0])
-	which will print the character h
-subscripting - the method of pulling a particular element from a string
-negative indices - you can use counting backwards using negative numbers
-	an example can be
-print("hello"[-1])
-	which will print the character o
-" " - anything within quotations is considered by the code as a string
-integers - whole numbers (numbers without any decimal places)
-print(2+2) - you can write integers straight into your code without the need of calling their type
-	in this case the system will print 4
-large numbers - in case of large numbers you can separate them for YOUR ease with underscore _ in your code (instead of the traditional commas). That is only to help you make sense of a large number and it will not be translated into code. The code just ignores it.
-	an example can be
-print(123_456_789) instead of print(123456789)
-	both will print the same
-float (floating point number) - the number that has decimal places (3.14159). It is a float because the decimal point can occur at any point
-boolean - this can only have two values True or False. They are written in capitals because they have to be used as such
-len( ) - cannot accept integers
-TypeError - this error occurs when you are using the wrong data type
-type( ) - you can check the data type of any value or variable in python by using this function
-	an example can be
-print(type("abc"))
-	which will give you <class 'str'> because it's a string
-type conversion - you can convert data into different data types using special functions like int() or float() or str()
-	not everything can be converted to a different data type and that's when you get a ValueError
-	an example can be
-print(int("abc")
-	than cannot be done because abc is not a number
-mathematical operations - basic mathematical operation of addition (+), substraction (-), multiplication (*) and division (/)
-	of note - division always return a floating number by default by something called implicit typecasting, meaning that Python implicitly converts the result to a float
-additional operators 
-	- when you want your division to return an integer and not a float you can use (//). You should be mindful though because in a case of a float result of 1.6667 will return 1 
-	- when you want to raise a number to a power you use (**) which is also called the exponent (for example 2**3 gives 8)
-PEMDAS - the order of priority of operations
-	Parentheses, Exponents, Multiplication/Division, Addition/Substraction
-	- in cases of multiplication and division or addition and substraction, the calculation which is most to the left will be prioritised
-flooring a number - you can floor a number or remove all decimal places using the int() function which converts a floating point number (with decimal places) into an integer (whole number)
-	an example can be
-int(3.738492) which will become 3
-rounding a number - if you want to round a decimal number to the nearest whole number using the traditional mathematical way, where anything over .5 rounds up and anything below rounds down. Then you can use the python round() function
-	an example can be
-round(3.738492) which will become 4
-round(3.14159) which will become 3
-round() - the function can get two inputs. The first is the number you want to round and the second one is number of digits you want to round it to
-	an example can be
-round(3.14159, 2) which will become 3.14
-assignment operators - assignment operators such as the addition assignment operator += will add the number on the right to the original value of the variable on the left and assign the new value to the variable
-	an example can be
-score = 0 if we are trying to keep a user score for example. Instead of doing score = score + 1 for every time they score a point, we can use score += 1 which will just add 1 to the original score
-	other assignment operators are
-	+= to add
-	-= to substract
-	*= to multiply
-	/= to divide
-these are quite usufull when you want to manipulate a value based on its previous value
-f-strings - in Python, we can use f-strings to insert a variable or an expression into a string. It's an easy way of mixing strings and different data types
-	an example can be
-age = 35
-print(f"I am {age} years old")
-	which will ouput I am 35 years old
-percentage calculation - in order to calculate a percentage of something you can multiply a number by the percentage number divided by 100. 
-	an example can be
-if you want to find the 10% of 100 would be
-10% = 10 / 100 = 0.10
-100 * 0.10 = 10
-:.nf (where n is number) = this is a way to force decimal points to our float
-	an example can be
-split_amount = 55
-print(f"Each person should pay: ${split_amount:.2f}")
-	will return Each person should pay: $55.00
+    print("hello"[0])
+
+  Output:
+
+    h
+
+- **Subscripting** is the method of pulling a specific element from a string.
+
+Negative Indices:
+----------------------
+- You can count **backwards** using negative numbers.
+- Example:
+
+    print("hello"[-1])
+
+  Output:
+
+    o
+
+Data Types:
+----------------------
+- **" " (Strings)** → Anything enclosed in quotes is considered a string.
+- **Integers** → Whole numbers (without decimal places).
+- Example:
+
+    print(2 + 2)
+
+  Output:
+
+    4
+
+- **Large Numbers** → For readability, underscores `_` can be used instead of commas.
+  Example:
+
+    print(123_456_789)  
+
+  This is the same as:
+
+    print(123456789)
+
+  Both will output:
+
+    123456789
+
+- **Floats (Floating Point Numbers)** → Numbers with decimal places.
+  Example:
+
+    print(3.14159) 
+
+- **Booleans** → Can only be `True` or `False` (must be capitalized in Python).
+
+Type Checking & Errors:
+----------------------
+- `len( )` **cannot** accept integers.
+- **TypeError** → Occurs when using an incompatible data type.
+- **type( )** → Used to check the data type of a variable or value.
+  Example:
+
+    print(type("abc"))
+
+  Output:
+
+    <class 'str'>
+
+Type Conversion (Type Casting):
+----------------------
+- Converts data into different types (`int()`, `float()`, `str()`).
+- Not all data can be converted (e.g., converting `"abc"` to an integer will cause a **ValueError**).
+- Example:
+
+    print(int("abc"))  # ❌ This will cause an error.
+
+Mathematical Operations:
+----------------------
+- Basic Operations:
+  - Addition: `+`
+  - Subtraction: `-`
+  - Multiplication: `*`
+  - Division: `/` (Always returns a **float**)
+
+- **Additional Operators:**
+  - `//` → **Floor Division** (returns an integer, removing decimals)
+  - `**` → **Exponentiation** (raising a number to a power)
+  - Example:
+
+      print(2 ** 3)
+
+    Output:
+
+      8
+
+PEMDAS:
+----------------------
+- Order of operations in Python follows **PEMDAS**:
+  - **P**arentheses
+  - **E**xponents
+  - **MD** Multiplication & Division (Left to Right)
+  - **AS** Addition & Subtraction (Left to Right)
+
+Flooring a Number:
+----------------------
+- Removes all decimal places and converts a float to an integer.
+- Example:
+
+    print(int(3.738492))
+
+  Output:
+
+    3
+
+Rounding a Number:
+----------------------
+- Rounds decimals **up** if ≥ 0.5, **down** if < 0.5.
+- Example:
+
+    print(round(3.738492))  # Output: 4
+    print(round(3.14159))   # Output: 3
+
+- **Rounding to Specific Decimal Places:**
+  - The `round()` function can accept a second argument to specify decimal places.
+  - Example:
+
+      print(round(3.14159, 2))
+
+    Output:
+
+      3.14
+
+Assignment Operators:
+----------------------
+- Assignment operators update a variable’s value **based on its previous value**.
+- Instead of:
+
+    `score = score + 1`
+
+  We can use:
+
+    `score += 1`
+
+- **Other Assignment Operators:**
+  - `+=` → Adds a value
+  - `-=` → Subtracts a value
+  - `*=` → Multiplies a value
+  - `/=` → Divides a value
+
+f-strings:
+----------------------
+- Allows inserting variables into strings easily.
+- Example:
+
+    age = 35
+    print(f"I am {age} years old")
+
+  Output:
+
+    I am 35 years old
+
+Percentage Calculation:
+----------------------
+- To calculate a percentage of a number:
+
+    Percentage = (percentage_value / 100) * total_value
+
+- Example: **10% of 100**
+  
+    `10% = 10 / 100 = 0.10`
+    
+    `100 * 0.10 = 10`
+
+Forcing Decimal Points (Formatting):
+----------------------
+- **`.nf` (where `n` is the number of decimal places)** forces a specific number of decimal points in a float.
+- Example:
+
+    split_amount = 55
+    print(f"Each person should pay: ${split_amount:.2f}")
+
+  Output:
+
+    Each person should pay: $55.00
