@@ -1,0 +1,101 @@
+Day 12 of 100: Notes
+----------------------
+
+Concepts Learned:
+----------------------
+- Local Scope
+- Global Scope
+- Namespace
+- Block Scope
+- Global Variables
+- Global Constants
+
+----------------------
+
+Key Terms & Explanations:
+----------------------
+
+Local Scope:
+----------------------
+- **Variables (or functions) declared inside a function** have **local scope**.
+- They can only be accessed **within the function** where they are defined.
+
+- **Example: Local Scope**
+
+    def my_function():
+        my_local_var = 2
+
+    # This will cause a NameError because my_local_var is not accessible outside the function
+    print(my_local_var)
+
+Global Scope:
+----------------------
+- **Variables or functions declared at the top level** (unindented) have **global scope**.
+- **They are accessible anywhere in the file**.
+
+- **Example: Global Scope**
+
+    my_global_var = 3
+
+    def my_function():
+        # Works fine since my_global_var is global
+        print(my_global_var)
+
+Namespace:
+----------------------
+- **A namespace is the context in which a name (variable, function, etc.) exists.**
+- Every variable or function has a **namespace** that determines where it can be accessed.
+
+Block Scope:
+----------------------
+- Unlike many other languages, **Python does not have block scope**.
+- Variables created inside loops, `if` statements, or `while` loops are **not restricted to those blocks**.
+- If they are **inside a function**, they have **function scope**.
+- If they are **outside a function**, they have **global scope**.
+
+- **Example: No Block Scope in Python**
+
+    # Accessible anywhere
+    my_global_var = 1
+
+    def my_function():
+        # Only accessible within my_function()
+        my_local_var = 2
+
+    for _ in range(10):
+        # Still accessible outside the loop (not block-scoped)
+        my_block_var = 3
+
+Global Variables:
+----------------------
+- By default, Python **does not allow modifying a global variable inside a function**.
+- To modify a **global variable inside a function**, use the **`global` keyword**.
+
+- **Example: Global Variable (Incorrect Usage – Causes an Error)**
+
+    a = 1
+
+    def my_function():
+        a += 1  # ❌ This causes an error
+        print(a)
+
+- **Example: Global Variable (Correct Usage with `global`)**
+
+    a = 1
+
+    def my_function():
+        global a  # Declare that we are modifying the global variable
+        a += 1
+        print(a)
+
+Global Constants:
+----------------------
+- **Global constants are values that should not be modified after they are set.**
+- They are written in **ALL_CAPS** with underscores `_` to separate words.
+
+- **Example: Defining Global Constants**
+
+    PI = 3.14159
+    GOOGLE_URL = "https://www.google.com"
+
+- These are meant to be **"set and forget"** values for easy reference.
