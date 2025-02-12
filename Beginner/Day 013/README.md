@@ -1,1 +1,7 @@
-Day 1 of 100
+## Day 13 of 100
+
+### No Project
+
+#### **Concepts Learned:**
+- Debugging
+------------
