@@ -1,0 +1,100 @@
+Day 13 of 100: Notes
+----------------------
+
+Concepts Learned:
+----------------------
+- Debugging
+
+----------------------
+
+Key Terms & Explanations:
+----------------------
+
+Steps of Debugging:
+----------------------
+1. **Describe the Problem**  
+   - The first step to solving a problem is to **clearly describe what’s wrong**.
+
+2. **Reproduce the Bug**  
+   - Some bugs **only appear under certain conditions**.  
+   - **Try to reliably reproduce the bug** to diagnose what triggers it.
+
+3. **Play Computer**  
+   - **Go through your code line by line** as if you were the computer.  
+   - This helps you **identify logical errors**.
+
+4. **Fix the Errors**  
+   - Fix any **syntax errors** (red underlines) before running the code.  
+   - **Warnings (yellow)** are optional, but sometimes they indicate potential issues.
+
+	Catching Exceptions (`try / except`):
+	----------------------
+	- You can use **`try / except`** blocks to **catch errors** and prevent program crashes.
+	- Example:
+
+    try:
+        age = int(input("How old are you? "))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
+        age = int(input("How old are you? "))
+
+    if age > 18:
+        print(f"You can drive at age {age}.")
+    else:
+        print("You are too young to drive.")
+
+	- **Problem:** If the user enters `"ten"` twice, the code still breaks.  
+	- **Solution:** Instead of `try / except`, use **proper input validation**.
+
+	- **Better Approach: Using a `while` loop to validate input**:
+
+    age_str = input("How old are you?:  ")
+    while not age_str.isdigit():
+        print("Invalid input. Use only digits. Try again.")
+        age_str = input("How old are you?:  ")
+
+    age = int(age_str)
+
+    if age > 18:
+        print(f"You can drive at age {age}.")
+    else:
+        print("You are too young to drive.")
+
+5. **Use `print()` Statements**  
+   - **`print()` is your friend!**  
+   - Print variable values **at different stages of execution** to debug logic issues.  
+   - Example: Debugging a `for` loop with `print()`:
+
+        for i in range(5):
+            print(f"Current value of i: {i}")
+
+6. **Use a Debugger**  
+   - Most **IDEs** (such as PyCharm, VS Code) have built-in debugging tools.  
+   - A debugger allows you to **pause** execution and inspect values.
+
+   **Common Debugging Tools:**
+   - **Breakpoint** → Pauses execution at a specific line.
+   - **Step Over** → Runs one line at a time.
+   - **Step Into** → Enters a function to see its internal execution.
+   - **Step Into My Code** → Similar to Step Into, but skips built-in modules.
+
+7. **Take a Break**  
+   - Sometimes, **stepping away from the screen** helps clear your mind and see the problem differently.
+
+8. **Ask a Friend**  
+   - A fresh pair of eyes (especially a programmer) can **spot mistakes you missed**.
+
+9. **Run Your Code Often**  
+   - **Test frequently** to catch bugs early.
+
+10. **Ask AI**  
+   - You can **paste error messages** or **explain the problem** to an AI like ChatGPT for analysis.  
+   - **Note:** AI **can make mistakes**, so always verify suggestions.
+
+11. **Search StackOverflow**  
+   - StackOverflow is **a great resource** for finding solutions to common errors.  
+   - **Tip:** Only use it **after exhausting other debugging methods**.
+
+----------------------
+
+Debugging is a **crucial skill** in programming. Using these strategies, you can **find and fix errors efficiently**!
