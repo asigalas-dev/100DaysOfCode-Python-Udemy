@@ -37,7 +37,6 @@ Steps of Debugging:
     except ValueError:
         print("Invalid input. Please enter a number.")
         age = int(input("How old are you? "))
-
     if age > 18:
         print(f"You can drive at age {age}.")
     else:
@@ -52,9 +51,7 @@ Steps of Debugging:
     while not age_str.isdigit():
         print("Invalid input. Use only digits. Try again.")
         age_str = input("How old are you?:  ")
-
     age = int(age_str)
-
     if age > 18:
         print(f"You can drive at age {age}.")
     else:
