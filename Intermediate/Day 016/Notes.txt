@@ -1,0 +1,153 @@
+Day 16 of 100: Notes
+----------------------
+
+Concepts Learned:
+----------------------
+- Object-Oriented Programming (OOP)
+
+----------------------
+
+Key Terms & Explanations:
+----------------------
+
+Procedural Programming:
+----------------------
+- Procedural programming is a **step-by-step** approach where we write functions that **execute sequentially**, usually from **top to bottom**.
+- **Programs follow a structured flow**, calling functions when needed to perform specific tasks.
+
+- **Example of Procedural Programming:**
+
+    def greet():
+        print("Hello!")
+
+    greet()
+
+  - This function is **independent** and can be called anywhere in the program.
+
+- **Limitations of Procedural Programming:**
+  - Code can become **hard to manage** in large programs.
+  - **Reusability is limited** as functions do not store state (they don’t “remember” things between calls).
+
+Object-Oriented Programming (OOP):
+----------------------
+- OOP is a **programming paradigm** where code is **structured around objects** rather than procedures.
+- Objects contain **attributes (data)** and **methods (functions that operate on that data)**.
+
+- **Why OOP?**
+  - **Encapsulation** → Group related data and functions together.
+  - **Reusability** → Write code once and reuse it multiple times.
+  - **Modularity** → Code is easier to manage, scale, and debug.
+
+Objects:
+----------------------
+- An **object** is a representation of a real-world entity **with attributes and behaviors**.
+- **Example:**  
+  - A **car** is an object.
+  - It has **attributes**: `color`, `brand`, `speed`.
+  - It has **methods**: `drive()`, `brake()`, `turn()`.
+
+- **In OOP, objects are instances of a class**.
+
+Attributes:
+----------------------
+- **Attributes** are variables that **store information** about an object.
+- **Example:**
+  
+    class Car:
+        def __init__(self, brand, color):
+            self.brand = brand  # Attribute
+            self.color = color  # Attribute
+
+    my_car = Car("Toyota", "Red")
+
+  - Here, `brand` and `color` are **attributes** of `my_car`.
+
+Methods:
+----------------------
+- **Methods are functions that belong to an object** and define what an object can do.
+- **Example:**
+
+    class Car:
+        def __init__(self, brand, color):
+            self.brand = brand
+            self.color = color
+
+        def drive(self):
+            print(f"The {self.color} {self.brand} is driving.")
+
+    my_car = Car("Toyota", "Red")
+    my_car.drive()
+
+  Output:
+
+    The Red Toyota is driving.
+
+Classes:
+----------------------
+- A **class** is a **blueprint** for creating objects.
+- It **defines attributes and methods** that objects will have.
+- **Example of a Class:**
+
+    class Car:
+        def __init__(self, brand, color):
+            self.brand = brand
+            self.color = color
+
+    my_car = Car("Toyota", "Blue")  # Creating an object from a class
+
+  - `Car` is the **class** (blueprint).
+  - `my_car` is an **object** created from the `Car` class.
+
+Object in Code:
+----------------------
+- An **object is an instance of a class**.
+- **Syntax to create an object:**
+
+    car = CarBlueprint()
+
+  - **`CarBlueprint()`** → This is a class.
+  - **`car`** → This is an object created from that class.
+
+Object Attributes and Methods:
+----------------------
+- **Access an attribute:**
+
+    print(car.color)  # Prints the car's color
+
+- **Call a method:**
+
+    car.drive()  # Executes the drive function of the car
+
+Python Packages:
+----------------------
+- **Python packages** are pre-written code collections created by other developers.
+- They help **extend functionality** without writing everything from scratch.
+- You can find packages at **[pypi.org](https://pypi.org)**.
+
+- **Installing a package using pip:**
+
+    pip install package_name
+
+- **Example: Using the `requests` package to make a web request:**
+
+    import requests
+    response = requests.get("https://www.google.com")
+    print(response.status_code)
+
+Snake Case:
+----------------------
+- **`snake_case`** is a **naming convention** where:
+  - All letters are **lowercase**.
+  - Words are separated by **underscores (`_`)**.
+- **Used for naming objects**.
+
+- **Example:**
+
+    coffee_maker = CoffeeMaker()
+
+  - **Class name (`CoffeeMaker`)** → Uses **PascalCase** (first letter of each word is capitalized).
+  - **Object name (`coffee_maker`)** → Uses **snake_case**.
+
+----------------------
+
+By understanding **OOP concepts** like **classes, objects, attributes, and methods**, we can create more **structured, reusable, and scalable** programs.
