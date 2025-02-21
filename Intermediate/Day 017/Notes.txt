@@ -1,0 +1,147 @@
+Day 17 of 100: Notes
+----------------------
+
+Concepts Learned:
+----------------------
+- Object-Oriented Programming (OOP)
+
+----------------------
+
+Key Terms & Explanations:
+----------------------
+
+`pass` Statement:
+----------------------
+- The `pass` keyword is used when we **want to create an empty class or function** but **don't want an error**.
+- It acts as a **placeholder** for future code.
+
+- **Example: Using `pass` in a class**
+
+    class Name:
+        pass
+
+- This allows the code to run without throwing an error, even though the class has no content.
+
+PascalCase / camelCase / snake_case:
+----------------------
+- **PascalCase** → Every word **starts with a capital letter**.
+- **camelCase** → First word **is lowercase**, but subsequent words **start with a capital letter**.
+- **snake_case** → All words are **lowercase and separated by underscores (`_`)**.
+
+- **Examples:**
+  - `MyClass` (PascalCase - Used for Class Names)
+  - `myVariableName` (camelCase - Not commonly used in Python)
+  - `my_variable_name` (snake_case - Preferred for variables and function names in Python)
+
+- **Python Naming Conventions:**
+  - **Classes:** `PascalCase`
+  - **Variables & Functions:** `snake_case`
+
+----------------------
+
+Creating Classes:
+----------------------
+- A **class** is a **blueprint** for creating objects.
+- **Objects** created from a class **share** the class’s attributes and methods.
+
+- **Example: Creating a Class in Python**
+
+    class User:
+        pass  # Placeholder (we can add content later)
+
+- Classes **must contain some content**. If left empty, **use `pass`** to avoid syntax errors.
+
+----------------------
+
+The `__init__()` Constructor:
+----------------------
+- `__init__()` is a **special built-in method** that is **automatically called** when an object is created.
+- It **initializes object attributes**.
+
+- **Example: Using `__init__()` in a class**
+
+    class User:
+        def __init__(self, user_id, name, age):
+            self.id = user_id  # Attribute: user ID
+            self.username = name  # Attribute: Name
+            self.age = age  # Attribute: Age
+            self.lives = 3  # Default starting value
+            self.following = 0  # Default starting value
+            self.follower = 0  # Default starting value
+
+- **Creating an object (instance) of the class:**
+
+    user_1 = User("ABC001", "Matthew", 18)
+    user_2 = User("ABC002", "Tony", 18)
+
+- The `User` class now allows **multiple user objects to be created with different values**.
+
+----------------------
+
+Methods in Classes:
+----------------------
+- **Methods** are **functions** inside a class that perform actions.
+- They can **modify attributes** or **interact with other objects**.
+
+- **Example: Adding Methods to Modify Attributes**
+
+    class User:
+        def __init__(self, user_id, name, age):
+            self.id = user_id
+            self.username = name
+            self.age = age
+            self.lives = 3
+            self.following = 0
+            self.follower = 0
+
+        # Method to reduce lives
+        def lose_a_life(self):
+            self.lives -= 1
+
+        # Method to follow another user
+        def follow(self, user):
+            self.following += 1
+            user.follower += 1
+
+- **Using methods in objects:**
+
+    user_1 = User("ABC001", "Matthew", 18)
+    user_2 = User("ABC002", "Tony", 18)
+
+    print(user_1.lives)  # Output: 3
+    user_1.lose_a_life()  # Reduce 1 life
+    print(user_1.lives)  # Output: 2
+
+    # Making user_1 follow user_2
+    user_1.follow(user_2)
+
+    print(user_1.following)  # Output: 1
+    print(user_2.follower)   # Output: 1
+
+----------------------
+
+Manually Modifying Attributes:
+----------------------
+- **We can also modify attributes manually,** but it is not recommended unless necessary.
+
+- **Example: Manually setting lives:**
+
+    user_1.lives = 5
+    print(user_1.lives)  # Output: 5
+
+- It is better to use methods to **control changes** to attributes instead of modifying them directly.
+
+----------------------
+
+Key Takeaways:
+----------------------
+- **Classes are blueprints** for creating objects.
+- **Objects are instances** of a class.
+- **Attributes store data**, while **methods define behavior**.
+- The `__init__()` method **initializes object attributes** when an object is created.
+- The `pass` keyword is used as a **placeholder** when defining empty classes.
+- **Naming conventions**:
+  - Classes → `PascalCase`
+  - Variables & Methods → `snake_case`
+
+OOP allows us to **structure our code efficiently, reuse logic, and create scalable programs**.
