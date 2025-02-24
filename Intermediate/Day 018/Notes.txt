@@ -1,0 +1,134 @@
+Day 18 of 100: Notes
+----------------------
+
+Concepts Learned:
+----------------------
+- Turtle Graphics
+- Tuples
+- Importing Modules
+
+----------------------
+
+Key Terms & Explanations:
+----------------------
+
+Importing Everything (`*`) from a Module:
+----------------------
+- Instead of importing **specific functions or classes**, we can **import everything** from a module using `*`.
+
+- **Example: Importing Everything from a Module**
+
+    from module_name import *
+
+- **Why This is Not Recommended:**
+  - It **makes the code unclear**—you won't know which functions or variables are from the module.
+  - If two different modules have **functions with the same name**, it can lead to **conflicts**.
+  - **Best Practice:** Always **import only what you need**.
+
+- **Better Approach: Importing Specific Functions**
+
+    from module_name import function_name
+
+  - This keeps the code **cleaner and more readable**.
+
+Aliasing a Module:
+----------------------
+- Sometimes module names are **long**, and we can **rename them** using `as`.
+
+- **Example: Giving an Alias to a Module**
+
+    import module_name as m
+
+  - Now, instead of writing `module_name.function()`, we can write `m.function()`.
+
+- **Example with `random` Module:**
+
+    import random as r
+
+    print(r.randint(1, 10))  # Generates a random number between 1 and 10
+
+Installing Modules:
+----------------------
+- Some modules are **not built into Python** and need to be **installed separately**.
+- Python modules are usually **installed per project** in a **virtual environment (`.venv`)**.
+
+- **How to Install a Module Using `pip`:**
+
+    pip install module_name
+
+- **Example: Installing `requests` Module**
+
+    pip install requests
+
+- **Checking Installed Modules in Your Project:**
+  
+    pip list
+
+- **Why Use a Virtual Environment (`.venv`)?**
+  - Prevents **conflicts** between different projects.
+  - Keeps installed modules **isolated** to each project.
+
+----------------------
+
+Turtle Graphics:
+----------------------
+- **Turtle Graphics** is a **module** in Python that allows you to create **simple graphics and drawings**.
+- It is **useful for learning programming concepts visually**.
+
+- **Basic Example Using Turtle Graphics:**
+
+    from turtle import Turtle, Screen
+
+    tim = Turtle()
+    tim.shape("turtle")
+    tim.color("blue")
+    tim.forward(100)
+
+    screen = Screen()
+    screen.exitonclick()
+
+- **Key Turtle Commands:**
+  - `forward(n)` → Moves the turtle forward `n` pixels.
+  - `backward(n)` → Moves the turtle backward `n` pixels.
+  - `right(angle)` → Turns the turtle **right** by the given angle.
+  - `left(angle)` → Turns the turtle **left** by the given angle.
+  - `color("color_name")` → Changes the turtle’s color.
+  - `penup()` → Lifts the pen (so it stops drawing).
+  - `pendown()` → Puts the pen down (so it starts drawing again).
+
+Tuples:
+----------------------
+- A **tuple** is a type of data structure that is **similar to a list**, but **immutable** (cannot be changed).
+
+- **Syntax:**
+  
+    my_tuple = (1, 2, 3)
+
+- **Key Differences Between Tuples and Lists:**
+  - **Tuples use `()` instead of `[]`**.
+  - **Tuples are immutable** (you cannot add, remove, or change elements).
+  - **Tuples are faster than lists** because they take up less memory.
+
+- **Accessing Tuple Elements:**
+  
+    print(my_tuple[0])  # Output: 1
+
+- **Trying to Modify a Tuple Will Cause an Error:**
+  
+    my_tuple[0] = 10  # ❌ TypeError: 'tuple' object does not support item assignment
+
+- **When to Use Tuples?**
+  - When **data should not be modified** (e.g., coordinates, fixed configurations).
+  - When **performance is important**.
+
+----------------------
+
+Key Takeaways:
+----------------------
+- **Avoid using `*` imports**—always import only what you need.
+- **Use aliasing (`as`)** for **long module names**.
+- **Use `pip install` to install external modules** (and manage them in a `.venv`).
+- **Turtle Graphics** is a fun way to **learn programming visually**.
+- **Tuples are immutable**, making them **faster and more memory-efficient** than lists.
+
+By understanding **modules, Turtle Graphics, and tuples**, we can **write cleaner, more efficient, and visually interactive code**!
