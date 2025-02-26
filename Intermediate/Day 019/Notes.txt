@@ -1,0 +1,192 @@
+Day 19 of 100: Notes
+----------------------
+
+Concepts Learned:
+----------------------
+- Event Listeners
+- State Instances
+- Multiple Instances
+
+----------------------
+
+Key Terms & Explanations:
+----------------------
+
+### Event Listener:
+- An **event listener** is a piece of code that **waits** for a specific event to occur (like a **mouse click, key press, or page load**) and then **triggers a function** in response.
+- Common events include:
+  - **Mouse clicks**
+  - **Key presses**
+  - **Window resizing**
+  - **Page loading**
+
+- **Example: Using an Event Listener in Python (`turtle` module)**
+
+    from turtle import Turtle, Screen
+
+    timmy = Turtle()
+    screen = Screen()
+
+    def move_forward():
+        timmy.forward(10)
+
+    screen.listen()  # Activates event listening
+    screen.onkey(move_forward, "space")  # Calls `move_forward()` when spacebar is pressed
+    screen.exitonclick()  # Keeps window open
+
+- **How it Works:**
+  - `screen.listen()` → Starts listening for key presses.
+  - `screen.onkey(move_forward, "space")` → Calls `move_forward()` when the **spacebar** is pressed.
+
+----------------------
+
+### Function as Inputs:
+- In Python, **functions can be passed as arguments** to other functions.
+- **When passing a function, do NOT include parentheses** `()`.
+
+- **Example: Passing a Function as an Input**
+
+    def function_a(something):
+        print("Executing function_a")
+        something()  # Call function that was passed as an argument
+
+    def function_b():
+        print("Executing function_b")
+
+    function_a(function_b)  # Pass function_b as an argument (without parentheses)
+
+  **Output:**
+
+    Executing function_a  
+    Executing function_b  
+
+- **Why is This Useful?**
+  - Allows functions to be **more flexible and reusable**.
+  - Commonly used in **event-driven programming** and **callbacks**.
+
+----------------------
+
+### Higher-Order Functions:
+- A **higher-order function** is a function that **takes another function as an argument** or **returns a function**.
+
+- **Example: A Higher-Order Function**
+
+    def greet(func):
+        return func("Hello")
+
+    def uppercase(text):
+        return text.upper()
+
+    print(greet(uppercase))  # Output: HELLO
+
+- **Why are Higher-Order Functions Important?**
+  - Allows **modular and flexible** programming.
+  - Commonly used in **functional programming** (e.g., `map()`, `filter()`, `sorted()`).
+
+----------------------
+
+### Using Methods Not Made by Us:
+- When using **built-in methods or functions from external libraries**, it is **better to use keyword arguments** instead of positional arguments.
+- **Why?**
+  - **Keyword arguments** make the code **more readable**.
+  - Helps **avoid mistakes** when methods have many parameters.
+
+- **Example: Using Keyword Arguments**
+
+    def my_function(a, b, c):
+        print(f"a: {a}, b: {b}, c: {c}")
+
+    my_function(c=3, a=1, b=2)
+
+  **Output:**
+
+    a: 1, b: 2, c: 3
+
+- **Example: Using Positional Arguments**
+
+    my_function(1, 2, 3)
+
+  - Works **fine**, but **not as readable** when dealing with many arguments.
+
+- **Best Practice:**
+  - Use **keyword arguments** when calling **external functions** to avoid confusion.
+
+----------------------
+
+### Object State:
+- **Each object created from a class can have different attributes and behaviors**.
+- The unique **combination of attributes and methods** an object has is known as its **state**.
+- This allows objects created from the same class to behave **independently**.
+
+- **Example: Two Objects with Different States**
+
+    from turtle import Turtle
+
+    timmy = Turtle()
+    tommy = Turtle()
+
+    timmy.color("green")  # Timmy is green
+    tommy.color("blue")   # Tommy is blue
+
+- **Explanation:**
+  - Both **`timmy` and `tommy`** are created from the `Turtle` class.
+  - Each object has **different properties** (e.g., `color`).
+  - This is what we call **different object states**.
+
+- **Object States Change Over Time**
+  - Objects can **change state** by modifying their attributes or calling methods.
+  - **Example: Changing State During Execution**
+
+    class Player:
+        def __init__(self, name):
+            self.name = name
+            self.score = 0  # Initial state
+
+        def increase_score(self):
+            self.score += 10  # Changes state
+
+    player1 = Player("Alice")
+    print(player1.score)  # Output: 0
+    player1.increase_score()
+    print(player1.score)  # Output: 10
+
+  - The **state of `player1` changed** when `increase_score()` was called.
+
+----------------------
+
+### Multiple Instances:
+- **Each object (instance) of a class has its own separate data (state).**
+- Even if multiple objects are created from the same class, they **do not affect each other**.
+
+- **Example: Creating Multiple Instances of a Class**
+
+    class User:
+        def __init__(self, username):
+            self.username = username
+            self.posts = 0  # Initial state
+
+        def write_post(self):
+            self.posts += 1  # Changes object state
+
+    user1 = User("Alice")
+    user2 = User("Bob")
+
+    user1.write_post()
+    print(user1.posts)  # Output: 1
+    print(user2.posts)  # Output: 0 (Bob's state is unchanged)
+
+- **Why Does This Matter?**
+  - Objects **operate independently**, even if they come from the same class.
+  - This makes OOP **scalable** and **efficient**.
+
+----------------------
+
+### Key Takeaways:
+- **Event Listeners** allow functions to execute in response to events (e.g., key presses).
+- **Functions can be passed as inputs** to other functions **without parentheses**.
+- **Higher-order functions** allow functions to work with other functions, making the code **more flexible**.
+- **Use keyword arguments when calling functions** to improve clarity and avoid mistakes.
+- **Object state** refers to the **current values of an object's attributes**.
+- **Multiple instances** of a class operate **independently** and maintain their own states.
+
+By understanding these concepts, we can write **more dynamic, interactive, and scalable programs** using OOP principles!
